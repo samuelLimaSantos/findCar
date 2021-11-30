@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Routes  } from './src/routes';
 import { useFonts, Ubuntu_400Regular, Ubuntu_700Bold, Ubuntu_500Medium } from '@expo-google-fonts/ubuntu';
 import AppLoading from 'expo-app-loading';
+import { theme } from './src/global/style';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,7 +18,7 @@ export default function App() {
 
   return (
     <>
-      <StatusBar translucent />
+      <StatusBar translucent backgroundColor={theme.colors.background}/>
       <Routes />
     </>
   );
