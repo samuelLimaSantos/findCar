@@ -8,9 +8,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@expo-google-fonts/ubuntu": "^0.2.0",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "expo": "~41.0.1",
+    "expo-app-loading": "^1.2.1",
     "expo-splash-screen": "~0.10.2",
     "expo-status-bar": "~1.0.4",
     "expo-updates": "~0.5.4",
