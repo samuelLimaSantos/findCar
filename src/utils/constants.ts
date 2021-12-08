@@ -14,5 +14,6 @@ export const descriptionTexts = {
 
 export const buttonTexts = {
   SELECT: 'Selecionar onde estacionei',
-  GO: 'Encontrar o meu veículo'
+  GO: 'Ir até o veículo',
+  FINISHED: 'Achei o veículo'
 }

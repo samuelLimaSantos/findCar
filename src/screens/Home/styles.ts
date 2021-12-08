@@ -22,7 +22,7 @@ export const Description = styled.Text`
 `;
 
 export const MapContainer = styled.View`
-  /* height: 90%; */
+  height: 80%;
 `;
 
 export const ButtonContainer = styled.View`
@@ -31,6 +31,15 @@ export const ButtonContainer = styled.View`
   margin-bottom: 32px;
   width: 100%;
   align-items: center;
+`;
+
+export const DistanceText = styled.Text`
+  margin-bottom: 16px;
+  width: 200px;
+  text-align: center;
+  font-family: ${theme.fonts.bold};
+  color: ${theme.colors.primary};
+  font-size: 14px;
 `;
 
 
