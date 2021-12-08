@@ -1,10 +1,15 @@
 import React from 'react';
-import { Container, Title, CarImage, CircleRed, TitleContainer, BottomContainer, Logo } from './styles';
+import { useNavigation } from '@react-navigation/native';
+import { Container, Title, CarImage, TitleContainer, BottomContainer, Logo } from './styles';
 import { Button } from '../../components/button';
 import carImage from '../../../assets/car.png';
 import logoImage from '../../../assets/Logo.png';
 
+
 export const WelcomeScreen = () => {
+
+  const { navigate } = useNavigation();
+
   return (
     <Container>
       <CarImage source={carImage}/>
@@ -21,6 +26,7 @@ export const WelcomeScreen = () => {
         <Button 
           buttonText="Conheça" 
           iconName="corner-down-right"
+          onPress={() => navigate('Home' as never)}
         />
 
         <Logo source={logoImage} />
