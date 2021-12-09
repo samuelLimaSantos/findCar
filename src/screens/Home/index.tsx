@@ -153,8 +153,14 @@ export const Home = () => {
                 setDistance(distanceBetween);
 
                 const intensity = getVibrationIntensity(distanceBetween);
-                
+
                 Vibration.vibrate(intensity, false);
+
+                console.log('Atualização da localização', nativeEvent.coordinate)
+
+                if (distanceBetween <= 2) {
+                  handleFinishProcess();
+                }
               }
             }}
             userLocationPriority={'high'}
