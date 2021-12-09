@@ -7,6 +7,7 @@ import { MarkerContent } from '../../components/markerContent';
 import carImage from '../../../assets/Logo.png';
 import { Button } from '../../components/button';
 import { buttonTexts, descriptionTexts, vibrationIntensity } from '../../utils/constants';
+import { theme } from '../../global/style';
 import { 
   Container, 
   Description, 
@@ -15,7 +16,6 @@ import {
   ButtonContainer,
   DistanceText
 } from './styles';
-import { theme } from '../../global/style';
 
 export const Home = () => {
 
@@ -72,8 +72,6 @@ export const Home = () => {
       longitude: position[1]
     })
 
-    console.log(distanceBetween);
-
     setDistance(distanceBetween);
 
     setPhase(2);
@@ -124,7 +122,6 @@ export const Home = () => {
 
       <MapContainer>
         {position[0] !== 0 && (
-          // menor mais zoom
           <MapView
             initialRegion={{
               latitude: position[0],
@@ -154,8 +151,9 @@ export const Home = () => {
                 })
 
                 setDistance(distanceBetween);
-                console.log(distanceBetween);
+
                 const intensity = getVibrationIntensity(distanceBetween);
+                
                 Vibration.vibrate(intensity, false);
               }
             }}
